@@ -67,11 +67,14 @@ function fetchTasks(){
 
     tasksResults.innerHTML += '<div class="well">'+
 
-                                  '<h3>'+name+ '<p>' + details + '</p>'
+                                      '<h3>'+name+'</h3>' + details +
 
-                                  '<p>'+'<a onclick="deleteTask(\''+name+'\')" class="btn btn-danger" href="#">Delete</a>' + '</p>' +
 
-                                  '</h3>'+
+                                  '<p>'+ '</br>' +'<a onclick="deleteTask(\''+name+'\')" class="btn btn-danger" href="#">Delete</a>' + '</p>' +
+
+                                  "_________________________________________________________________________"
+
+
 
                                   '</div>';
 }
