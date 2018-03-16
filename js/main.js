@@ -31,17 +31,21 @@ function saveTask(e){
 }
 
 function deleteTask(url){
-
   var tasks = JSON.parse(localStorage.getItem('tasks'));
+  var name = url;
+  //console.log(tasks);
 
   for(var i =0;i < tasks.length;i++){
+    console.log(i);
+    console.log(tasks[i].name);
     if(tasks[i].name == name){
+
       tasks.splice(i, 1);
 
     }
   }
   localStorage.setItem('tasks', JSON.stringify(tasks));
-  fetchtasks();
+  fetchTasks();
 
 }
 
@@ -51,7 +55,7 @@ function fetchTasks(){
   var tasksResults = document.getElementById('tasksResults');
 
   tasksResults.innerHTML = '';
-  console.log(tasks);
+  //console.log(tasks);
   if(tasks != null){
     for(var i = 0; i < tasks.length ; i++){
 
@@ -64,7 +68,7 @@ function fetchTasks(){
                                   "_________________________________________________________________________"
 
                                   '</div>';
-}
+    }
   }
 
 }
