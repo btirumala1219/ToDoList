@@ -24,7 +24,6 @@ function saveTask(e){
   document.getElementById('myForm').reset();
   fetchTasks();
   //e.preventDefault();
-
 }
 
 function deleteTask(url){
@@ -41,7 +40,6 @@ function deleteTask(url){
   }
   localStorage.setItem('tasks', JSON.stringify(tasks));
   fetchTasks();
-
 }
 
 function fetchTasks(){
@@ -58,11 +56,9 @@ function fetchTasks(){
                                   '<h3>'+name+'</h3>' + details +
                                   '<p>'+ '</br>' +'<a onclick="deleteTask(\''+name+'\')" class="btn btn-danger" href="#">Delete</a>' + '</p>' +
                                   "_________________________________________________________________________"
-
                                   '</div>';
     }
   }
-
 }
 
 
